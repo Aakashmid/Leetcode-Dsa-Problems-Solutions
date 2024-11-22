@@ -51,6 +51,5 @@ int main(){
     } else {
         cout << "No two numbers add up to the target." << endl;
     }
-
     return 0;
 }
