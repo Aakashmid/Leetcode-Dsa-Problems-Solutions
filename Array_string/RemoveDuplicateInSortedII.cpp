@@ -2,7 +2,8 @@
 #include<vector>
 using namespace std;
 
-// This function removes duplicates from an array and returns the new length.  (in sorted array a element can appears atmost twice)
+/* This function removes duplicates from an array and returns the new length. 
+ (in sorted array a element can appears atmost twice) */
 
 int removeDuplicates(vector<int>& nums) {
         if(nums.size()<2) return nums.size();

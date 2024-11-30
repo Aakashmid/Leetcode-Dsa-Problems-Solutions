@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+/*
+Remove the target value from the array 
+*/
+
 class Solution
 {
 public:
@@ -23,6 +27,7 @@ public:
         // }
 
 
+        // two pointer approach
         int L = 0;
         int R = nums.size() - 1;
         while (L <= R)

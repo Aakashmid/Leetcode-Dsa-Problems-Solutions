@@ -3,7 +3,9 @@
 #include<unordered_map>
 using namespace std;
 
-// find duplicate element in an array , given - an array of size n , in which 1 to n-1  are present but there is a element which is twice in array , find that element 
+/*  find duplicate  element in an array , given - an array of size n , in which 1 to n-1  are present 
+but there is a element which is twice in array , find that element */
+
 int findDuplicate(vector<int>& arr){
 
     // first approach 
@@ -19,7 +21,6 @@ int findDuplicate(vector<int>& arr){
         }
     }
 
-
     // second approach
     // int ans = 0 ;
     // for (int i=0;i<arr.size();i++){
@@ -30,6 +31,7 @@ int findDuplicate(vector<int>& arr){
     // }
     // return ans;
 }
+
 
 int main(){
     vector<int> arr = {1,3,5,2,4,4};  // here n=6,  then element will be till 5 and one element is twice  
