@@ -9,27 +9,27 @@ but there is a element which is twice in array , find that element */
 int findDuplicate(vector<int>& arr){
 
     // first approach 
-    int n = arr.size();
-    unordered_map<int,int> nums;
-    for(int i = 0; i < n;i++){
-        if(nums.count(arr[i])){
-            return arr[i];
-        }
-        else
-        {
-            nums[arr[i]] = 1;
-        }
-    }
+    // int n = arr.size();
+    // unordered_map<int,int> nums;
+    // for(int i = 0; i < n;i++){
+    //     if(nums.count(arr[i])){
+    //         return arr[i];
+    //     }
+    //     else
+    //     {
+    //         nums[arr[i]] = 1;
+    //     }
+    // }
 
     // second approach
-    // int ans = 0 ;
-    // for (int i=0;i<arr.size();i++){
-    //     ans=ans^arr[i];
-    // }
-    // for (int i=1;i<arr.size();i++){
-    //     ans=ans^i;
-    // }
-    // return ans;
+    int ans = 0 ;
+    for (int i=0;i<arr.size();i++){
+        ans=ans^arr[i];
+    }
+    for (int i=1;i<arr.size();i++){
+        ans=ans^i;
+    }
+    return ans;
 }
 
 
