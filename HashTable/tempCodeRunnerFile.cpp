@@ -1,8 +1,11 @@
-nt ans = 0 ;
-    for (int i=0;i<arr.size();i++){
-        ans=ans^arr[i];
+ int n = arr.size();
+    unordered_map<int,int> nums;
+    for(int i = 0; i < n;i++){
+        if(nums.count(arr[i])){
+            return arr[i];
+        }
+        else
+        {
+            nums[arr[i]] = 1;
+        }
     }
-    for (int i=1;i<arr.size();i++){
-        ans=ans^i;
-    }
-    r
