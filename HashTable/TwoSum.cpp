@@ -30,7 +30,7 @@ using namespace std;
         }
         return {};
         
-    }  
+    }   
 int main(){
     int n, target;
     cout << "Enter the number of elements in the array: ";
