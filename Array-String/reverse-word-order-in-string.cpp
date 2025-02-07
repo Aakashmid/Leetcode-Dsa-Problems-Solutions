@@ -18,17 +18,7 @@ public:
         {
             words.push_back(word);
         }
-        // for(int i=0;i<s.length();i++){
-        //     if((s[i]==' ' && word!="") || (i==s.length()-1 && )){
-        //         words.push_back(word);
-        //         word="";
-        //         continue;
-        //     }
-        //     else if (s[i]!=' '){
-        //         word+=s[i];
-        //     }
-
-        // }
+        
 
         reverse(words.begin(), words.end());
 
