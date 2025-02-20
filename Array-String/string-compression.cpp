@@ -85,8 +85,7 @@ public:
         //         chars[lastIndex++] = chars[i];
         //     if (count > 1) {
         //         for (char c : to_string(count))
-        //             chars[lastIndex++] = c;
-        //     }
+        //             chars[lastIndex++] = c;R
         //     i = j;
         // }
         // return lastIndex;
