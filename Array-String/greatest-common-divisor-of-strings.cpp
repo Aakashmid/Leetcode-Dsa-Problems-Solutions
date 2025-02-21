@@ -9,15 +9,15 @@ int gcd(int a, int b)
     {
         return b;
     }
+    }
     else
     {
-        return gcd(b, remainder);
+        return gcd(b, remainder); // Recursive case: call gcd with b and remainder
     }
 }
-string gcdOfStrings(string str1, string str2)
-{
 
-    if (str1 + str2 == str2 + str1) // checking if common divisor exists
+// Function to find the greatest common divisor of two strings
+// This function checks if the concatenation of the two strings in both orders is equal
     {
         int l1 =
             str1.length() > str2.length() ? str1.length() : str2.length();

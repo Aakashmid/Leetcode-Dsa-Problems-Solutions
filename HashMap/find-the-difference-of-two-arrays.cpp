@@ -2,6 +2,10 @@
 #include <vector>
 #include <unordered_set>
 using namespace std;
+
+/*
+question :  find difference of two sets
+*/
 vector<vector<int>> findDifference(vector<int> &nums1, vector<int> &nums2)
 {
     unordered_set<int> set1(nums1.begin(), nums1.end());
