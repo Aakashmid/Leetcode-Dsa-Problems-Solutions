@@ -5,6 +5,11 @@ using namespace std;
 class Solution
 {
 public:
+/*
+Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+*/
     int majorityElement(vector<int> &nums)
     {
 
@@ -24,7 +29,9 @@ public:
         // }
         // return 0;
 
-        // one of approach is sort array using sort method and return element at n/2 position becaue majority element is always be at middle in sorted array
+        // one of the approach is sort array using sort method and return element at n/2 position becaue majority element is always be at middle in sorted array
+
+
 
         // Moore's Voting Algorithm
         int count = 0;

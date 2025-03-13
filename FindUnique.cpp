@@ -2,7 +2,7 @@
 using namespace std;
 
 // in this problem we have to find  a number which occure only once 
-// size of array is n = 2m=1 means it is even , and m numbers are twice an 1 is unique
+// size of array is n = 2m+1 means it is even , and m numbers are twice an 1 is unique
 
 int main(){
     int arr[] = {4, 3, 2, 4, 1, 3, 2};
