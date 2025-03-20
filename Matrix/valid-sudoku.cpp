@@ -1,35 +1,34 @@
-#include <iostream>
-#include <vector>
-#include <unordered_set>
+#include<iostream>
+#include<vector>
+#include<unordered_map>
 using namespace std;
 
-/**
- * Checks whether a given Sudoku board is valid.
- * A valid board follows these rules:
- * - Each row contains unique numbers (1-9) without repetition.
- * - Each column contains unique numbers (1-9) without repetition.
- * - Each 3x3 subgrid contains unique numbers (1-9) without repetition.
- *
- * The function ignores empty cells represented by '.'
- */
-bool isValidSudoku(vector<vector<char>> &board) {
-    vector<unordered_set<char>> rows(9), cols(9);
-    vector<vector<unordered_set<char>>> squares(3, vector<unordered_set<char>>(3));
+bool isValidSudoku(vector<vector<char>> &board)
+{
+    vector<unordered_map<char, int>> rows(9);
+    vector<unordered_map<char, int>> cols(9);
+    vector<vector<unordered_map<char, int>>> squares(3, vector<unordered_map<char, int>>(3)); // Initialize 3x3 grid of unordered maps
 
-    for (int r = 0; r < 9; r++) {
-        for (int c = 0; c < 9; c++) {
-            char val = board[r][c];
-            if (val == '.') continue;
-
-            // Check if the value is already present in the row, column, or 3x3 grid
-            if (rows[r].count(val) || cols[c].count(val) || squares[r / 3][c / 3].count(val)) {
+    for (int r = 0; r < 9; r++)
+    {
+        for (int c = 0; c < 9; c++)
+        {
+            if (board[r][c] == '.')
+            {
+                continue;
+            }
+            else if (rows[r].count(board[r][c]) ||
+                     cols[c].count(board[r][c]) ||
+                     squares[r / 3][c / 3].count(board[r][c])) // Corrected access to squares
+            {
                 return false;
             }
-
-            // Insert the value into respective row, column, and 3x3 grid sets
-            rows[r].insert(val);
-            cols[c].insert(val);
-            squares[r / 3][c / 3].insert(val);
+            else
+            {
+                rows[r][board[r][c]] = 1;
+                cols[c][board[r][c]] = 1;
+                squares[r / 3][c / 3][board[r][c]] = 1; // Corrected access to squares
+            }
         }
     }
     return true;
