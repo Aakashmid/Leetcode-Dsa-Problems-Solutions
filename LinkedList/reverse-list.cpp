@@ -21,9 +21,12 @@ ListNode* reverseList(ListNode* head) {
 
 int main() {
     ListNode* head = createList({1, 2, 3, 4, 5});
- 
     head = reverseList(head);
     cout << "After reversing: ";
-    printList(head);
+    // // printList(head);
+
+    // ListNode* head2 = head;
+    // cout<<head->val<<endl;
+    // cout<<head2->val;
     return 0;
 }
