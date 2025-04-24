@@ -3,7 +3,8 @@
 using namespace std;
 
 /*
-give candy to children based on their rating , if rating is higher than left or right child then give more candy than their neighbour
+give candy to children based on their rating , 
+if rating is higher than left or right child then give more candy than their neighbour
 */
 int candy(vector<int> &ratings)
 {
