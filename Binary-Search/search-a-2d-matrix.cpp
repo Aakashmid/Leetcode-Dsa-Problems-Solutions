@@ -3,6 +3,7 @@
 using namespace std;
 // approach - first find the row in which target can be found and after that run binary search on that row's elements
 
+
 // time complexity - O(log(m)+log(n)) , memory complexity - O(1)
 bool searchMatrix(vector<vector<int>> &matrix, int target)
 {
@@ -11,6 +12,7 @@ bool searchMatrix(vector<vector<int>> &matrix, int target)
 
     while (l_row <= r_row)
     {
+        
         int mid_row = (l_row + r_row) / 2;
 
         // target element is in  current row
