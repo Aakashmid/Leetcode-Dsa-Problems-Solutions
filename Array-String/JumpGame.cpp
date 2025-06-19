@@ -37,7 +37,7 @@ bool canJump(vector<int> &nums)
         return goal == 0;
     }
 
-    /************ Approach 2 (not optimal)***************/
+    /************ Approach 2 ***************/
     // int furthest = 0;
     // for (int i = 0; i < nums.size(); i++)
     // {
