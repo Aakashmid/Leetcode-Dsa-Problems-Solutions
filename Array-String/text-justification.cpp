@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 
+
+// Function to concatenate words with a specified delimiter
 string concatenate_words(vector<string> line_words, string del)
 {
     string ans = "";
@@ -20,6 +22,7 @@ string concatenate_words(vector<string> line_words, string del)
     return ans;
 }
 
+
 vector<string> fullJustify(vector<string> &words, int maxWidth)
 {
     vector<string> res;
@@ -33,7 +36,7 @@ vector<string> fullJustify(vector<string> &words, int maxWidth)
         if (length + line.size() + words[i].length() > maxWidth)
         {
             int extra_spaces = maxWidth - length;
-            int spaces = extra_spaces / max(1, static_cast<int>(line.size()) - 1); // spaces to put between words
+            int spaces = extra_spaces / max(1, static_cast<int>(line.size()) - 1); // spaces to put between words  , using max to avoid 0 denominator
             int remainder = extra_spaces % max(1, static_cast<int>(line.size()) - 1);
 
             for (int j = 0; j < max(1, static_cast<int>(line.size()) - 1); j++)
