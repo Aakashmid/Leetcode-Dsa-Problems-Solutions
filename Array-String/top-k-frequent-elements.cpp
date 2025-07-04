@@ -18,11 +18,11 @@ vector<int> topKFrequent(vector<int>& nums, int k) {
         */
         unordered_map<int, int> count;
         vector<vector<int>> freqs(nums.size() + 1);
-        for (int num : nums) {
+        for (int num : nums) {  // count frequency of each element 
             count[num]++;
         }
 
-        for (const auto& pair : count) {
+        for (const auto& pair : count) {  // create bucket
             freqs[pair.second].push_back(pair.first);
         }
 

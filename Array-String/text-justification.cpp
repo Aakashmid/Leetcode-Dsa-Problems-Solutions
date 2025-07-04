@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -22,6 +23,22 @@ string concatenate_words(vector<string> line_words, string del)
     return ans;
 }
 
+
+/*
+Approach for fullJustify function:
+1. Initialize result vector and current line vector
+2. For each word in input:
+   - If adding current word exceeds maxWidth:
+     a. Calculate spaces needed between words
+     b. Distribute spaces evenly between words
+     c. Add extra spaces from left if not equally divisible
+     d. Add line to result and reset current line
+   - Add current word to line
+3. Handle last line specially:
+   - Left justify words with single space
+   - Pad with extra spaces at end
+4. Return result vector
+*/
 
 vector<string> fullJustify(vector<string> &words, int maxWidth)
 {

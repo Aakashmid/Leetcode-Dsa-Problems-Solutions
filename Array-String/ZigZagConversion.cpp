@@ -14,11 +14,11 @@ public:
         //     return s;
         // }
 
-        // vector<vector<char>> rows(numRows);
+        // vector<vector<char>> rows(numRows);  // vector for storing each row char 
         // string result="";
-        // int row_i=0,d=1; // direction of movement , if 1 then down and if -1
-        // up for(char ch:s){
-        //     rows[row_i].push_back(ch);
+        // int row_i=0,d=1; // direction of movement , if 1 then down and if -1 up 
+        //for(char ch:s){
+        //     rows[row_i].push_back(ch); 
         //     if(row_i== numRows-1){
         //         d=-1;
         //     }
