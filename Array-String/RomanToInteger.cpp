@@ -3,6 +3,8 @@
 #include <unordered_map>
 using namespace std;
 
+
+/// approach - just add respecting value of each symbol , if current value is greater than previous symbol than subtract twice of previous symbols value
 int romanToInt(string s)
 {
     int result = 0;

@@ -50,7 +50,7 @@ vector<string> fullJustify(vector<string> &words, int maxWidth)
     while (i < words.size())
     {
         // line is completed
-        if (length + line.size() + words[i].length() > maxWidth)
+        if (length + line.size() + words[i].length() > maxWidth)  // here line.size()  represents no. of spaces (minimum required)
         {
             int extra_spaces = maxWidth - length;
             int spaces = extra_spaces / max(1, static_cast<int>(line.size()) - 1); // spaces to put between words  , using max to avoid 0 denominator
@@ -66,7 +66,7 @@ vector<string> fullJustify(vector<string> &words, int maxWidth)
                 }
             }
 
-            res.push_back(concatenate_words(line, ""));
+            res.push_back(concatenate_words(line, ""));  // concatenater words function for making a single stirng from line array of string 
             line.clear();
             length = 0;
         }
@@ -79,7 +79,7 @@ vector<string> fullJustify(vector<string> &words, int maxWidth)
     }
 
     // handling last line
-    string last_line = concatenate_words(line, " ");
+    string last_line = concatenate_words(line, " ");  // in last line each word is seperated by only single space and all extra space is added to right
     int extra_spaces = maxWidth - last_line.length();
     for (int j = 0; j < extra_spaces; j++)
     {

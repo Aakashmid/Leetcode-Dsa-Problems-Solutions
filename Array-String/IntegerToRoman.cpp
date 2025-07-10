@@ -2,6 +2,12 @@
 #include <vector>
 #include <string>
 using namespace std;
+
+/*
+// Approach: Greedy algorithm using value-symbol mapping
+// Start with largest Roman values, subtract and append symbols until num becomes 0
+// Uses arrays for integer values and corresponding Roman symbols in descending order
+*/
 string intToRoman(int num)
 {
     int Integers[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
@@ -10,7 +16,7 @@ string intToRoman(int num)
     int i = 0;
     while (num > 0 && i < 13)
     {
-        if (num >= Integers[i])
+        if (num >= Integers[i])   // find closest smaller value than add it to answer 
         {
             num -= Integers[i];
             result += Romans[i];
