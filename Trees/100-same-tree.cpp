@@ -56,7 +56,7 @@ public:
     //     return true;
     // }
 
-    // (DFS - go deep first in on subtree and then the other subtree)
+    // (DFS - go deep first in one subtree and then the other subtree)
     // DFS iterative  solution
     //     bool isSameTree(TreeNode* p, TreeNode* q) {
     //     stack<pair<TreeNode*, TreeNode*>> stk;
