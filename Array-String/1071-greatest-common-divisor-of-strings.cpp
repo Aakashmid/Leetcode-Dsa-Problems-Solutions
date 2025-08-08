@@ -2,6 +2,10 @@
 #include <string>
 using namespace std;
 
+/*
+Problem statement : - Given two strings str1 and str2, return the greatest common divisor of the two strings. If there is no common divisor, return an empty string.
+*/ 
+
 int gcd(int a, int b)
 {
     int remainder = a % b;
